@@ -22,12 +22,15 @@ Zum Rechnen benötigt der Computer eine zentrale Recheneinheit, die CPU. CPU-s r
 |5|101|
 |6|110|
 
+Eine Stelle in Binärdarstellung heißt Bit. D.h. die Zahl 110 hat 3 Bits.
+
 Eine einfache Berechnung sieht dann wie folgt aus:
 
 |A|+|B|=|C|
 |---|---|---|---|---|
 |1|+|1|=|0 Ü1|
 ||||=|10|
+
 
 ## Wie speichert ein Computer Daten?
 
@@ -52,3 +55,30 @@ Für einen Programmierer ist es recht schwer sich solche Addressen zu merken. Eu
 |4|Gelber Zettel|gelb|
 |2|Roter Zettel|rot|
 |31|Grüner Zettel|grün|
+
+
+Das Betriebssystem stellt den persistenten Speicher über Dateisysteme zur Verfügung. Ein Dateisystem hat die Aufgabe Dateien zu verwalten. Dateien können in Ordnern gespeichert werden. Die genaue Umsetzung kann von Dateisystem zu Dateisystem variieren. Eine Datei selbst wird vom Betriebsystem als eine Sequenz von Blöcken (z.B. 4 KB  - 4 Kilobyte = 4096 Bytes = 8*4096 Bit je Block) gesehen. 
+
+|Blöcke|Block_0|Block_1|Block_2|...|Block_n-1|
+|------|-------|-------|-------|---|---------|
+|Daten|0000110|1111001|0011001|...|0000000|
+
+
+## Was hat die Datenspeicherung mit der Berechnung zu tun?
+
+Damit der Computer mit Daten (z.B. Zahlen) rechnen kann, passiert folgendes:
+
+1. Ein Teil der Daten wird von der Festplatte in den schnelleren RAM geladen. Meißt gibt es noch einen schneleren Zwischespeicher in der CPU selbst.
+2. Im Rahmen der Berechnung werden die Daten in CPU-Registern abgelegt. Ein CPU-Register ist meißt so breit, dass es eine große Zahl aufnehmen kann
+3. Das Ergebnis der Berechnung wird wieder in einem Register zwischengespeichert, bevor es in den RAM und dann auf Festplatte geschrieben wird.
+
+|Register|Wert|Operation|
+|--------|----|---------|
+|R1|0001||
+|||+|
+|R2|0010||
+|R3|0011||
+
+R1 = 1
+R2 = 2
+R3 = 1+2 = 3

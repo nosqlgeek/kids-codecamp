@@ -1,50 +1,58 @@
-# Codecamp for Kids
+# Code Camp for Kids
 
-## Requirements
+## Anforderungen
 
-* A Linux computer having Python 3.x and VSCode installed (e.g., Raspberry Pi 400 with Ubuntu)
-* Eager to learn programming
+* Du brauchst einen Windows oder Linux-Computer, der die folgende Software installiert hat:
+    * Programmiersprache Python 3.x 
+    * Entwicklungsumgebung VSCode benötigt
+* Falls Du noch keine Computer besitzt, empfehlen wir Dir einen Raspberry Pi 400
+* Du solltest Motivation mitbrigen in die Softwareentwicklung einzusteigen
 
-## Learning Objectives
+## Lernziele
 
-* Understand the Python programming basics
-* Learn how to model software and how to build it from the ground up
-* Be able to write code that fulfills a set of requirements
-* Work with a database
-* At the end it should be understood how Python web apps are structured and can be developed
+Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 
-## Schedule
+* Du verstehst die Grundlagen des Programmierens mit Python
+* Du kannst ein Softwareprogramm von Grund auf planen und erstellen
+* Code ist kein Fremdwort mehr für Dich und du kannst bereits welchen schreiben 
+* Du verstehst wie man Anforderungen aufschreibt und kannst sie in Code umsetzen
+* Die Arbeit mit Datenbanken macht Sinn für Dich
+* Am Ende solltest Du vertanden haben wie eine Web-Anwendung aufgebaut ist, und wie Du eigene Web-Apps entwickeln kannst
 
-### Weekly
-* 4 sessions, one per week
-* 2 hours each
-* with 2 breaks in between
+## Ablauf
 
-### Session
-* 14:00 - 14:30: Theory + Demo
-* 14:30 - 14:40: Break
-* 14:40 - 15:20: Simple exercise
-* 15:20 - 15:30: Break
-* 15:30 - 16:00: Project work
+### Wöchentlich
+* 4 Sitzungen, eine pro Woche
+* 2 Stunden pro Sitzung
+* 2 Pausen zwischedurch
 
-## Sessions
-### Session 1 - Programming Basics
-#### Theory
-* Computer basics for Kids: What is a CPU? What is RAM? What is a disk?
-* RAM, variables and addresses
-* Demo a simple calculator in Scratch
-* Controll structures
-* Demo loops and if statements
+### Grob je Sitzung
+* 14:00 - 14:30: Theorie + Demo
+* 14:30 - 14:40: Pause
+* 14:40 - 15:20: Einfache Übungsaufgabe
+* 15:20 - 15:30: Pause
+* 15:30 - 16:00: Projektarbeit
 
-#### Exercise
-1. Login to the computer
-2. Open Scratch
-3. Open the prepared project and play with it: The cat will step further if a calculation was completed successfully.
-4. Understand the variables and the controll strucutres
-5. Open the IDE and run the CLI application, that has the same logic
+## Wochen
+### Woche 1 - Grundlagen der Programmierung
+#### Theorie
+* Computergrundlagen: Was ist ein Prozessor (CPU)? Was ist flüchtiger Speicher (RAM)? Was ist eine Festplatte?
+* RAM, Variablen and Addressen
+* Kontrollstrukturen, Schleifen und Bedingungen
 
-#### Project
-* Outlook to the "Twitter Clone" project
+#### Übungsaufgaben
+1. Übung 1: Auf der Festplatte befindet sich eine lange Zahlenreihe. Die ersten ersten 10 Zahlen sollen von der Festplatte in den RAM geladen werden. Zur Verarbeitung legen wir 2 der 10 Zahlen in CPU-Register. Danach soll eine Addition innerhalb der CPU durchgeführt werden. Das Ergebnis wird in ein drittes CPU-Register geschrieben. Danach legen wir das Ergebnis im RAM ab und schreiben es dann auf Festplatte.
+ und dann auf Festplatte schreiben
+2. Übung 2: Ein Rechenprogramm mal anders: Zwei der Studenten sollen um die Wette Kopfrechnenaufgaben lösen. Wer zuerst den Arm hebt, darf lösen. Das Ganze dauert 10 Durchläufe.
+3. Übung 3: Die Studenten sollen das Ablaufdiagram unseres "Rechenprogramms" nachvollziehen und verstehen.
+4. Übung 4: Final ist es Notwendig in den Computer einzuloggen, die Entwicklungsumgebung zu öffnen un den Quellcode unseres "Rechenprogramms" zu verstehen. 
+
+
+#### Projekt
+* Ausblick auf das "Twitter Clone"-Projekt
+
+
+>TODO
 
 ### Session 2 - Python
 #### Theory
