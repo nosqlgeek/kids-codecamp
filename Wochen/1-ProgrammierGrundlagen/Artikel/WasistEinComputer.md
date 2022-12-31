@@ -66,11 +66,13 @@ Das Betriebssystem stellt den persistenten Speicher über Dateisysteme zur Verf�
 
 ## Was hat die Datenspeicherung mit der Berechnung zu tun?
 
-Damit der Computer mit Daten (z.B. Zahlen) rechnen kann, passiert folgendes:
+Damit der Computer mit Daten (z.B. Zahlen) rechnen kann, passiert zusammenfassend folgendes:
 
-1. Ein Teil der Daten wird von der Festplatte in den schnelleren RAM geladen. Meißt gibt es noch einen schneleren Zwischespeicher in der CPU selbst.
-2. Im Rahmen der Berechnung werden die Daten in CPU-Registern abgelegt. Ein CPU-Register ist meißt so breit, dass es eine große Zahl aufnehmen kann
+1. Ein Teil der Daten wird von der Festplatte in den schnelleren RAM geladen. Meißt gibt es einen noch schnelleren Zwischespeicher (Cache) in der CPU selbst.
+2. Im Rahmen der Berechnung werden die Daten in CPU-Registern abgelegt. Ein CPU-Register ist meißt so breit, dass es eine große Zahl aufnehmen kann. Die meißten heutigen Computer haben 32 oder 64 Bit breite Register.
 3. Das Ergebnis der Berechnung wird wieder in einem Register zwischengespeichert, bevor es in den RAM und dann auf Festplatte geschrieben wird.
+
+Hier ein Beispiel:
 
 |Register|Wert|Operation|
 |--------|----|---------|
