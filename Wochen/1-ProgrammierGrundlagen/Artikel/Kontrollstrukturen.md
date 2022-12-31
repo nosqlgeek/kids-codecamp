@@ -6,32 +6,34 @@ Computer können nicht nur Daten zwischenspeichern und Berechnungen durchführen
 
 * NICHT
 
-|a|Ergebnis|
+|A|Ergebnis|
 |---|---|
 |0|1|
 |1|0|
 
+Das Ergebnis ist das Gegenteil der Eingabe. Wenn die Eingabe 0 (falsch) ist, dann ist das Ergebnis 1 (wahr).
+
 * UND
 
-|a|b|Ergebnis|
+|A|B|Ergebnis|
 |---|---|---|
 |0|0|0|
 |0|1|0|
 |1|0|0]
 |1|1|1|
 
-Nur wenn `a` und `b` auf 1 (wahr) stehen, dann ist das Ergebnis auch 1 (wahr). Ansonsten ist das Ergebnis 0 (falsch).
+Nur wenn `A` und `B` auf 1 (wahr) stehen, dann ist das Ergebnis auch 1 (wahr). Ansonsten ist das Ergebnis 0 (falsch).
 
 * ODER
 
-|a|b|Ergebnis|
+|A|B|Ergebnis|
 |---|---|---|
 |0|0|0|
 |0|1|1|
 |1|0|1]
 |1|1|1|
 
-Wenn eines der beiden (`a` oder `b`) auf 1 steht, dann ist das Ergebnis auch 1 (wahr). Wenn beide Eingabewerte auf 0 stehen (falsch), dann ist das Ergebnis auch 0 (falsch). Es ist leicht zu sehen, dass sich ODER genau umgekehrt zu UND verhält. Wir können auch sagen:
+Wenn eines der beiden (`A` oder `B`) auf 1 steht, dann ist das Ergebnis auch 1 (wahr). Wenn beide Eingabewerte auf 0 stehen (falsch), dann ist das Ergebnis auch 0 (falsch). Es ist leicht zu sehen, dass sich ODER genau umgekehrt zu UND verhält. Wir können auch sagen:
 
 * ODER ist gleich NICHT UND
 * UND ist gleich NICHT ODER
@@ -46,6 +48,12 @@ Hier ist ein Beispiel:
 
 * WENN du eine Aufgabe richtig rechnest, DANN bekommst Du einen Punkt, SONST bekommst Du keinen Punkt
 
+
+Mit Hilfe der oben genannten Logik können komplexere Bedingugen formuliert werden, z.B.:
+
+* WENN (es regnet ODER schneit) UND die Sonne scheint 
+
+
 ## Schleifen
 
 Eine Schleife bedeutet, dass etwas wiederholt wird. Wir unterscheiden zwischen zwei Arten von Schleifen:
@@ -58,7 +66,7 @@ Normalerweise sind Schleifen an Bedingungen geknüpft. Hier wieder zwei Beispiel
 * SOLANGE noch nicht alle Aufgaben gerechnet sind, WIEDERHOLE den Ablauf mit der nächsten Aufgabe
 * WIEDERHOLE das Lernen aller Vokabeln BIS Du alle Vokabeln richtig auswendig kanntest
 
-Ein besonderer Fall sind Zählschleifen. Dabei ist die Bedingung, dass eine bestimmte Anzahl an Durchläufen (Iterationen) erfolgte:
+Ein besonderer Fall sind Zählschleifen. Dabei ist die Bedingung, dass eine bestimmte Anzahl an Durchläufen (Iterationen) erfolgt:
 
 * VON ... MIT SCHRITTWEITE ... BIS ... WIEDERHOLE
 
