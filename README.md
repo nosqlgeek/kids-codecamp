@@ -50,4 +50,6 @@ Den zughörige Artikel findet ihr [hier]().
 2. Übung 2: [Ein Rechenprogramm mal anders](./Wochen/1-ProgrammierGrundlagen/Aufgaben/2-RechenprogrammAnders.md)
 
 #### Projekt
-* Ausblick auf das "Twitter Clone"-Projekt
+* Ausblick auf das [TClone-Projekt](./Wochen/1-ProgrammierGrundlagen/Projekt/Projekt.md)
+
+> Bis nächste Woche!
