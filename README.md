@@ -41,7 +41,7 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 #### Theorie
 * [Computergrundlagen](./Wochen/1-ProgrammierGrundlagen/Artikel/WasistEinComputer.md): Was ist ein Prozessor (CPU)? Was ist flüchtiger Speicher (RAM)? Was ist eine Festplatte (HDD)?
 * [Variablen and Addressen](./Wochen/1-ProgrammierGrundlagen/Artikel/WasistEinComputer.md)
-* [Kontrollstrukturen](./Wochen/1-ProgrammierGrundlagen/Artikel/Kontrollstrukturen.md): Schleifen und Bedingungen
+* [Kontrollstrukturen](./Wochen/1-ProgrammierGrundlagen/Artikel/Kontrollstrukturen.md): Wie kann man Wahrheitswerte ausdrücken? Wie benutzt man Schleifen und Bedingungen?
 
 Den zughörige Artikel findet ihr [hier]().
 
