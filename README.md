@@ -2,6 +2,8 @@
 
 ## Anforderungen
 
+Das Code Camp ist an Kinder und Jugendliche zwischen 12 und 16 Jahren addressiert.
+
 Du brauchst einen Windows oder Linux-Computer und die folgende Software:
 
 * Programmiersprache Python 3.x 
