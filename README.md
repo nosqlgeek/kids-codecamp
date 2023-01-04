@@ -43,8 +43,6 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 * [Variablen and Addressen](./Wochen/1-ProgrammierGrundlagen/Artikel/WasistEinComputer.md)
 * [Kontrollstrukturen](./Wochen/1-ProgrammierGrundlagen/Artikel/Kontrollstrukturen.md): Wie kann man Wahrheitswerte ausdrücken? Wie benutzt man Schleifen und Bedingungen?
 
-Den zughörige Artikel findet ihr [hier]().
-
 #### Übungsaufgaben
 1. Übung 1: [Von der Festplatte zur CPU](./Wochen/1-ProgrammierGrundlagen/Aufgaben/1-VonHDDzuCPU.md)
 2. Übung 2: [Ein Rechenprogramm mal anders](./Wochen/1-ProgrammierGrundlagen/Aufgaben/2-RechenprogrammAnders.md)
