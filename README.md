@@ -1,104 +1,55 @@
-# Codecamp for Kids
-
-## Requirements
-
-* A Linux computer having Python 3.x and VSCode installed (e.g., Raspberry Pi 400 with Ubuntu)
-* Eager to learn programming
-
-## Learning Objectives
-
-* Understand the Python programming basics
-* Learn how to model software and how to build it from the ground up
-* Be able to write code that fulfills a set of requirements
-* Work with a database
-* At the end it should be understood how Python web apps are structured and can be developed
-
-## Schedule
-
-### Weekly
-* 4 sessions, one per week
-* 2 hours each
-* with 2 breaks in between
-
-### Session
-* 14:00 - 14:30: Theory + Demo
-* 14:30 - 14:40: Break
-* 14:40 - 15:20: Simple exercise
-* 15:20 - 15:30: Break
-* 15:30 - 16:00: Project work
-
-## Sessions
-### Session 1 - Programming Basics
-#### Theory
-* Computer basics for Kids: What is a CPU? What is RAM? What is a disk?
-* RAM, variables and addresses
-* Demo a simple calculator in Scratch
-* Controll structures
-* Demo loops and if statements
-
-#### Exercise
-1. Login to the computer
-2. Open Scratch
-3. Open the prepared project and play with it: The cat will step further if a calculation was completed successfully.
-4. Understand the variables and the controll strucutres
-5. Open the IDE and run the CLI application, that has the same logic
-
-#### Project
-* Outlook to the "Twitter Clone" project
-
-### Session 2 - Python
-#### Theory
-* Basic data types in Python
-* Complex data types in Python
-* Controll structures in Python
-* Demo how to run Python code
-
-#### Exercise
-
-* Write a Python script that asks for a message text
-* Print all messsage texts without ordering
-* Print all message texts, ordered by time
-
-#### Project
-
-* Explain data modeling basics
-* Which objects do we have?
-* Which proporties do the objects need?
-* Demo a solution that uses objects/dicts
-
-### Session 3 - Object oriented Programming
-#### Theory
-* Objects
-* Properties
-* Functions
-* How to persist data
-
-#### Exercise
-
-* Create classes for Users, Comments, Post
-* Store user data to Redis
-* Retrieve user data from Redis
-* Create a post and store it in Redis
-* Add a comment and store it
-
-#### Project
-
-* Demo the full solution, including test cases
-* More insights into debugging
-* Outlook to the web app
-
-### Sesssion 4 - Web App development with Python
-#### Theory
-* Client-Server Architecture
-* HTTP protocol
-* Frontend vs. Backend
-
-#### Exercise
-1. Run a web server, based on Flask
-2. Send a message and retrieve a message with the browser
-
-### Project
-* Show the Flask project
-* Explain templates and routes
-* Our 'Twitter clone' web app
+# Code Camp for Kids
  
+## Anforderungen
+ 
+Das Code Camp ist an Kinder und Jugendliche zwischen 12 und 16 Jahren adressiert.
+ 
+Du brauchst einen Windows oder Linux-Computer, der die folgende Software installiert hat:
+ 
+* Programmiersprache Python 3.x
+* Entwicklungsumgebung VSCode
+ 
+Falls Du noch keinen Computer besitzt und nicht so viel Geld ausgeben möchtest, empfehlen wir Dir einen Raspberry Pi 400. Diesen bekommst Du aktuell unter 150 Euro.
+ 
+Die wichtigste Anforderung ist, dass Du Motivation mitbringst, in die Softwareentwicklung einzusteigen.
+ 
+## Lernziele
+ 
+Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
+ 
+* Du verstehst die Grundlagen des Programmierens mit Python.
+* Du kannst ein Softwareprogramm von Grund auf planen und erstellen.
+* Code ist kein Fremdwort mehr für Dich und du kannst bereits welchen schreiben.
+* Du verstehst wie man Anforderungen aufschreibt und kannst sie in Code umsetzen.
+* Die Arbeit mit Datenbanken ergibt Sinn für Dich.
+* Am Ende solltest Du verstanden haben, wie eine Web-Anwendung aufgebaut ist, und wie Du eigene Web-Apps entwickeln kannst.
+ 
+## Ablauf
+ 
+### Wöchentlich
+* 4 Sitzungen, eine pro Woche
+* 2 Stunden pro Sitzung
+* 2 Pausen zwischendurch
+ 
+### Je Sitzung
+* 14:00 - 14:30: Theorie + Demo
+* 14:30 - 14:40: Pause
+* 14:40 - 15:20: Einfache Übungsaufgabe
+* 15:20 - 15:30: Pause
+* 15:30 - 16:00: Projektarbeit
+ 
+## Wochen
+### Woche 1 - Grundlagen der Programmierung
+#### Theorie
+* [Computergrundlagen](./Wochen/1-ProgrammierGrundlagen/Artikel/WasistEinComputer.md): Was ist ein Prozessor (CPU)? Was ist flüchtiger Speicher (RAM)? Was ist eine Festplatte (HDD)?
+* [Variablen and Addressen](./Wochen/1-ProgrammierGrundlagen/Artikel/WasistEinComputer.md)
+* [Kontrollstrukturen](./Wochen/1-ProgrammierGrundlagen/Artikel/Kontrollstrukturen.md): Wie kann man Wahrheitswerte ausdrücken? Wie benutzt man Schleifen und Bedingungen?
+ 
+#### Übungsaufgaben
+1. Übung 1: [Von der Festplatte zur CPU](./Wochen/1-ProgrammierGrundlagen/Aufgaben/1-VonHDDzuCPU.md)
+2. Übung 2: [Ein Rechenprogramm mal anders](./Wochen/1-ProgrammierGrundlagen/Aufgaben/2-RechenprogrammAnders.md)
+ 
+#### Projekt
+* Ausblick auf das [TClone-Projekt](./Wochen/1-ProgrammierGrundlagen/Projekt/Projekt.md)
+ 
+> Bis nächste Woche! Hier geht es bald weiter.
