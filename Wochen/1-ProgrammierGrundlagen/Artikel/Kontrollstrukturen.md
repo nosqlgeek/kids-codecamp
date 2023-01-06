@@ -30,7 +30,7 @@ Nur wenn `A` und `B` auf 1 (wahr) stehen, dann ist das Ergebnis auch 1 (wahr). A
 |---|---|---|
 |0|0|0|
 |0|1|1|
-|1|0|1]
+|1|0|1|
 |1|1|1|
  
 Wenn eines der beiden (`A` oder `B`) auf 1 steht, dann ist das Ergebnis auch 1 (wahr). Wenn beide Eingabewerte auf 0 stehen (falsch), dann ist das Ergebnis auch 0 (falsch). Es ist leicht zu sehen, dass sich ODER genau umgekehrt zu UND verhält. Wir können auch sagen:
