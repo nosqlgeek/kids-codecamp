@@ -1,5 +1,9 @@
 # TODO-s
 
+## Session 1 - Basics
+
+* Review progress
+
 ### Session 2 - Python
 #### Theory
 * Basic data types in Python
