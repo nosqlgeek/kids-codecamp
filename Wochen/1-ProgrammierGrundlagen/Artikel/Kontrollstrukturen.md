@@ -19,7 +19,7 @@ Das Ergebnis ist das Gegenteil der Eingabe. Wenn die Eingabe 0 (falsch) ist, dan
 |---|---|---|
 |0|0|0|
 |0|1|0|
-|1|0|0]
+|1|0|0|
 |1|1|1|
  
 Nur wenn `A` und `B` auf 1 (wahr) stehen, dann ist das Ergebnis auch 1 (wahr). Ansonsten ist das Ergebnis 0 (falsch).
