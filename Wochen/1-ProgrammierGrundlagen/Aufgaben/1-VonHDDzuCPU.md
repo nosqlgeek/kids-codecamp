@@ -17,6 +17,7 @@ Auf der Festplatte befindet sich eine Datei mit einer Blockgröße von 8 Bit. Hi
 Die ersten ersten 5 Zahlen sollen von der Festplatte in den RAM geladen werden. Welche der folgenden Adressen kann dafür verwendet werden?
 
 |Adresse|Wert|Frei|
+|-------|----|----|
 |0|00000000|1|
 |7|11111111|0|
 |15|00000000|1|
