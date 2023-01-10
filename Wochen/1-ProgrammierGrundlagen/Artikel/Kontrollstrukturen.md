@@ -35,8 +35,8 @@ Nur wenn `A` und `B` auf 1 (wahr) stehen, dann ist das Ergebnis auch 1 (wahr). A
  
 Wenn eines der beiden (`A` oder `B`) auf 1 steht, dann ist das Ergebnis auch 1 (wahr). Wenn beide Eingabewerte auf 0 stehen (falsch), dann ist das Ergebnis auch 0 (falsch). Es ist leicht zu sehen, dass sich ODER genau umgekehrt zu UND verhält. Wir können auch sagen:
  
-* ODER ist gleich NICHT UND
-* UND ist gleich NICHT ODER
+* NICHT(A ODER B) ist gleich NICHT(A) UND NICHT(B)
+* NICHT(A UND B) ist gleich NICHT(A) ODER NICHT(B)
  
 ## Bedingungen
  
