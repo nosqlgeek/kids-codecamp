@@ -13,6 +13,22 @@ else:
    punkte = punkte - 1
 ```
 
+## Match
+
+> Match ist erst ab Python 3.10 verfügbar
+
+Manchmal hat man sehr viele Bedingungen zu überprüfen. In diesem Falle kann `match ... case ... other ...` besser lesbar sein als `if ... elif ... else`.
+
+```
+match grusswort:
+   case: 'Hallo!':
+       print('Hallo!')
+   case: 'Grüß Gott!':
+       print('Grüß Dich!')
+   case other:
+       print('Guten Tag!')
+```
+
 ## While
 
 Solange eine Bedingung erfüllt ist, wiederhole:
@@ -23,6 +39,8 @@ while not alle_aufgaben_gerechnet:
 ```
 
 ## For
+
+Wiederhole für eine Anzahl an Werten:
 
 ```
 for i in range(0, 9):
