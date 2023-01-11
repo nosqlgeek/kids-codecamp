@@ -2,7 +2,7 @@
 
 ## Einführung
 
-Wir haben ja letzte Woche gesehen wie Computer Daten speichern und verarbeiten. Um Daten abspeichern zu können, muß der Computer wissen wieviel Speicher er für bestimmte Werte verwenden kann. Ein großes Bild braucht mehr Speicher als eine Zahl. Anders als bei anderen Programmiersprachen ist Python oft in der Lage den Datentypen bei Zuweisung des Werts selbst herauszufinden:
+Wir haben ja letzte Woche gesehen wie Computer Daten speichern und verarbeiten. Um Daten abspeichern zu können, muß der Computer wissen wieviel Speicher er für bestimmte Werte verwenden kann. Ein großes Bild braucht mehr Speicher als eine einzelne Zahl. Anders als bei anderen Programmiersprachen ist Python in der Lage den Datentypen bei Zuweisung des Werts selbst herauszufinden:
 
 ```
 <variable> = <wert>
@@ -14,7 +14,7 @@ Manchmal kann es nützlich sein den Typ der Variable zu erzwingen:
 <variable> = <typ>(<wert>)
 ```
 
-Die Funktion `type` erlaubt es Euch zu überprüfen ob eine Variable einen bestimmten Typ hat. Hier ein Beispiel:
+Die Funktion `type` erlaubt es Euch zu überprüfen, ob eine Variable einen bestimmten Typ hat. Hier ein Beispiel:
 
 ```
 type(<variable>)
@@ -24,7 +24,7 @@ Eingebaute Typen unterstützen Operationen. Zahlen, zum Beispiel, kann man addie
 
 ## Wahrheitswerte
 
-Wir hatten uns letzte Woche ja schon mit Bedingungen beschöftigt. Eine Aussage kann entweder wahr oder falsch (unwahr) sein. Das Ergebnis der Auswertung einer Aussage kann in einer Variable vom Typ `bool` gespeichert werden. Hier nochmal ein Beispiel:
+Wir hatten uns letzte Woche ja schon mit den Bedingungen beschäftigt. Eine Aussage kann entweder wahr oder falsch (unwahr) sein. Das Ergebnis der Auswertung einer Aussage kann in einer Variable vom Typ `bool` gespeichert werden. Hier nochmal ein Beispiel:
 
 ```
 ist_rot = True
@@ -35,11 +35,11 @@ print(type(ist_roter_kreis))
 print(ist_roter_kreis)
 ```
 
-## Zahlen 
+## Zahlen
 
 Python kennt die folgenden numerischen Datentypen:
 
-* `int`: Integer Zahlen sind gnze Zahlen, z.B. 42
+* `int`: Integer Zahlen sind ganze Zahlen, z.B. 42
 * `float`: Fließkommazahlen sind Kommazahlen, z.B. 1.34
 
 Python unterstützt die folgenden Operationen auf Zahlen:
@@ -58,7 +58,7 @@ a = 12
 b = 3
 c = a / b
 print(type(c))
-print(c) 
+print(c)
 ```
 
 Das Ergebnis von `a / b` ist zwar eigentlich die ganze Zahl `4`, allerdings wird die Kommazahl `4.0` zurückgegeben. Du kannst die Kommazahl wieder in eine Ganzzahl umwandeln:
@@ -82,11 +82,22 @@ Hier einige Beispieloperationen auf Zeichenketten:
 * `stip`: Leerzeichen am Anfang und am Ende entfernen
 * `len`: Länge des Strings
 
-Eine vollständige Liste dessen was ihr mit Strings alles machen könnt, findet sich [hier](https://www.w3schools.com/python/python_strings_methods.asp).
+Eine vollständige Liste dessen, was ihr mit Strings alles machen könnt, findet sich [hier](https://www.w3schools.com/python/python_strings_methods.asp).
 
-## Bielibige andere Daten als Bytes
+Hier noch ein Beispiel:
 
-Manchmal gibt es keinen einfachen eingebauten passenden Datentyp in Python. Python kennt z.B. keinen einfachen Bilddatentypen (später mehr zu komplexen Datentypen und Klassen). Ihr könnt die Daten dann direkt als Bytes speichern. Ein Byte sind 8 Bits. Die Bits waren die Nullen und Einsen, die wir letzte Woche besprochen haben. Euer Programm muß dann eben wissen wie es mit den Bytes umgehen soll.
+```
+hello_welt = 'Hello' + ' ' + 'Welt' + '!'
+print(hello_welt)
+```
+
+## Beliebige andere Daten als Bytes
+
+Manchmal gibt es keinen einfachen, eingebauten, und passenden Datentyp in Python. Python kennt z.B. keinen einfachen Datentyp für Bilder (später mehr zu komplexen Datentypen und Klassen). Ihr könnt die Daten dann direkt als Bytes speichern:
+
+* `bytes`: Aneinanderreihung von aufeinanderfolgenden Bits, Byte-weise gruppiert
+
+Ein Byte sind 8 Bits. Die Bits waren die Nullen und Einsen, die wir letzte Woche besprochen haben. Euer Programm muss dann eben wissen, wie es mit den Bytes umgehen soll.
 
 ```
 byte_haufen = b'Hallo Welt!'
@@ -94,4 +105,7 @@ print(byte_haufen.hex())
 48616c6c6f2057656c7421
 ```
 
-> Hexadezimalzahlen werden hier nicht im Detail behandelt. Nur soviel: Eine Hex-Zahl hat 4 Bits. D.h. zwei Hex-Zahlen ergeben ein Byte. Die ersten Zahlen 4 und 8 sind somit `0100 1000`, was der Binärwert für `H` ist. Das heißt, Hex-Zahlen sind praktisch um lange Binärzahlen kürzer darzustellen.
+Sicher ist Dir oben die Funktion `hex` aufgefallen. Außerdem fragst Du Dich vielleicht was die Zeichenfolge `48616c6c6f2057656c7421` zu bedeuten hat. Hexadezimalzahlen werden hier nicht im Detail behandelt. Nur soviel: Stell Dir vor, Du hättest 16 Finger (0,..,9, A,..,F). Das praktische an Hex-Zahlen ist, dass eine Hex-Zahl durch 4 Bits ausgedrückt werden kann. Sie stellt also ein Halb-Byte dar. Das heißt, dass zwei Hex-Zahlen ein Byte ergeben. Die ersten Zahlen in unserem Beispiel (4 und 8) entsprechen somit der Bitfolge `0100 1000`. Diese Bitfolge kann Python auch als den Buchstaben `H` sehen. Das heißt, Hex-Zahlen sind praktisch, um:
+
+* Lange Binärzahlen kürzer darzustellen
+* Nicht als Text vorliegende Daten als String auszugeben
