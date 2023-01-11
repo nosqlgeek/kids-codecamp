@@ -52,4 +52,21 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 #### Projekt
 * Ausblick auf das [TClone-Projekt](./Wochen/1-ProgrammierGrundlagen/Projekt/Projekt.md)
  
+
+### Woche 2 - Einführung in Python
+
+#### Theorie
+* [Wiederholung Kontrollstrukturen](./Wochen/2-Python/Artikel/Kontrollstrukturen.md)
+* [Einfache Datentypen](./Wochen/2-Python/Artikel/EinfacheDatentypen.md)
+* [Komplexe Datentypen](./Wochen/2-Python/Artikel/KomplexeDatentypen.md)
+
+#### Übungsaufgaben
+
+1. Übung 3: Ausführung eines Programms in VSCode
+2. Übung 4: Kontrollstrukturen
+3. Übung 5: Enfache Datentypen
+4. Übung 6: Komplexe Datentypen
+
+> TODO
+
 > Bis nächste Woche! Hier geht es bald weiter.
