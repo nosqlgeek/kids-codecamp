@@ -81,6 +81,9 @@ Hier einige Beispieloperationen auf Zeichenketten:
 * `lower`: In Kleinbuchstaben
 * `stip`: Leerzeichen am Anfang und am Ende entfernen
 * `len`: Länge des Strings
+* `format`: Formatieren indem man innerhalb der Zeichenkette ersetzt
+
+> Nebenbei: Statt Zeichenketten mit `+` zu verketten ist es oft besser lesbar eine Zeichkette zu formattieren. Statt `'Hallo Welt' + ', oder ' + 'Hi' + '!'` nimmt man besser `'{}, oder {}!'.format('Hallo Welt, 'Hi')'`.
 
 Eine vollständige Liste dessen, was ihr mit Strings alles machen könnt, findet sich [hier](https://www.w3schools.com/python/python_strings_methods.asp).
 

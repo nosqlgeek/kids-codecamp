@@ -9,9 +9,28 @@ Wenn eine Bedingung erfüllt ist, führe aus:
 ```
 if aufgabe_richtig:
    punkte = punkte + 1
+elif aufgabe_teilweise_richtig:
+   punkte = punkte + 0.5
 else:
    punkte = punkte - 1
 ```
+
+Bedingungen können mit Hilfe von Vergleichsoperatoren ausgewertet werden. Welche Operatoren erlaubt sind und wie die Operation im Hintergrund funktioniert, hängt vom jeweiligen Datentyp ab. Dazu lernst Du bald mehr. Hier sind einige Beispiele:
+
+* `==`: Gleich
+* `!=`: Ungleich
+* `>`: Größer als
+* `<`: Kleiner als
+* `>=`: Größer als, oder gleich
+* `<=`: Kleiner als, oder gleich
+
+Das `if aufgabe_richtig:` im obigen Beispiel ist die Kurzform für `if aufgabe_richtig == True`.
+
+Außerdem kannst du mehrere Bedingungen zu einer neuen Bedingung verketten, zum Beispiel:
+
+* `or`: Oder
+* `and`: Und
+* `not`: Nicht
 
 ## Match
 

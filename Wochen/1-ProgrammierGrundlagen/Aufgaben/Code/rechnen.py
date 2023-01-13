@@ -33,8 +33,8 @@ def ausgabe_punkte():
 if __name__ == "__main__":    
     
     print("# Start")
-    erster_teilnehmer = "T1"
-    zweiter_teilnehmer  = "T2"
+    erster_teilnehmer = "Julia"
+    zweiter_teilnehmer  = "Arin"
 
     for i in range(0, len(AUFGABEN)-1):
 
