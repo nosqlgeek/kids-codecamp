@@ -23,7 +23,7 @@ Aus solchen Anforderungen (bzw. Geschichten) kann man folgendes herauslesen:
 Es gibt verschiedene Analyseverfahren, um aus Anforderungen Anwendungen zu erstellen. Ich finde es am einfachsten, Dinge (Objekte) und deren Funktionen aus den Anforderungen herauszulesen.
 
 
-## 1.) Objekte
+### 1.) Objekte
 
 In unserer Übungsaufgabe haben wir das schon begonnen. Wenn wir über weiteren Anforderungen unserer TClone-Anwendung nachdenken, dann können wir die folgenden Objekttypen identifizieren:
 
@@ -33,7 +33,7 @@ In unserer Übungsaufgabe haben wir das schon begonnen. Wenn wir über weiteren 
 * Besucherstatistiken
 
 
-## 2.) Objektbeziehungen
+### 2.) Objektbeziehungen
 
 Wir wollen außerdem wissen wir die Objekte zueinander in Beziehung stehen:
 
@@ -44,7 +44,7 @@ Wir wollen außerdem wissen wir die Objekte zueinander in Beziehung stehen:
 
 Normalerweise überlege ich hier auch schon wieviel mit wieviel in Beziehung steht. Wie viele Posts hat ein Nutzer (viele, wenig, genau einen)?
 
-## 3.) Objekteigenschaften
+### 3.) Objekteigenschaften
 
 Im nächsten Schritt denken wir darüber nach, welche Eigenschaften die Objekte haben sollen. Hier einige Beispiele:
 
@@ -55,7 +55,7 @@ Im nächsten Schritt denken wir darüber nach, welche Eigenschaften die Objekte 
 
 Es macht auch Sinn sich zu überlegen, welche Eigenschaften ein solches Objekt eigentlich einmalig machen. Es gibt z.B. viele Leute mit dem gleichen Namen, aber nur eine Person hat genau diese E-Mail-Addresse.
 
-## 4.) Funktionen
+### 4.) Funktionen
 
 Was sollen die Objekte tun können? Hier wieder Beispiele:
 
