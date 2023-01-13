@@ -79,7 +79,7 @@ Hier einige Beispieloperationen auf Zeichenketten:
 * `+`: Aneinanderhängen von Zeichenketten
 * `upper`: In Großbuchstaben
 * `lower`: In Kleinbuchstaben
-* `stip`: Leerzeichen am Anfang und am Ende entfernen
+* `srtip`: Leerzeichen am Anfang und am Ende entfernen
 * `len`: Länge des Strings
 * `format`: Formatieren indem man innerhalb der Zeichenkette ersetzt
 
