@@ -2,7 +2,7 @@
 
 ## Anforderungen
 
-Stell Dir vor jemand fragt Dich: "Kannst Du mir ein Programm schreiben, dass es erlaubt Nachrichten (Posts) einzugeben? Ich möchte Posts zu einer bestimmten Zeit eingeben können. Diesem Satz entnehmen wir bereits die folgenden Anforderungen:
+Stell Dir vor, jemand fragt Dich: "Kannst Du mir ein Programm schreiben, dass es erlaubt, Nachrichten (Posts) einzugeben? Ich möchte Posts zu einer bestimmten Zeit eingeben können.” Diesen Sätzen entnehmen wir bereits die folgenden Anforderungen:
 
 1. Es soll möglich sein Posts einzugeben
 2. Die Zeit der Eingabe muss erfasst werden
@@ -12,19 +12,18 @@ Welche Daten müssen wir also erfassen?
 * Den Text des Posts
 * Die Zeit der Eingabe des Posts
 
-Welche Aktionen müssem wir umsetzen?
+Welche Aktionen müssen wir umsetzen?
 
 * Post erstellen
 
-
 ## Aufgabe
 
-Schreibe ein Kommandozeilenprogramm, dass die Anforderungen oben erfüllt. Die folgenden Kontrollstrukturen sollen in Deinem Programm vorkommen:
+Schreibe ein Kommandozeilenprogramm, das die Anforderungen oben erfüllt. Die folgenden Kontrollstrukturen sollen in Deinem Programm vorkommen:
 
 * `if ... elif ... else`
 * `while`
 
-Öffne die Quellcodedatei `tclone.py`. Die Datei ist momentan ein Lückentext. Die folgenden Teilaufgaben helfen Dir die Lücken zu füllen:
+Öffne die Quellcodedatei `tclone.py`. Die Datei ist momentan ein “Lückentext”. Die folgenden Teilaufgaben helfen Dir die Lücken zu füllen:
 
 ### a.) Schleifen
 
@@ -37,7 +36,7 @@ Wenn die Eingaben 'P' (Post erstellen), 'R' (Posts lesen), oder 'Q' (Beenden) si
 
 ## Test
 
-Teste Dein Programm indem Du die folgenden Schritte durchführst:
+Teste Dein Programm indem Du die folgenden Schritte durchgeführst:
 
 1. Führe das Programm in VSCode aus!
 2. Gib 'Bla' ein und bestätige mit der Eingabetaste!

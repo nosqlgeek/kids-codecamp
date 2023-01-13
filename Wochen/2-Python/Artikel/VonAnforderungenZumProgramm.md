@@ -2,13 +2,13 @@
 
 ## Anforderungen
 
-Während der Übungsaufgabe hast du bereits etwas wichtiges gelernt. Eine Software-Anwendung sollte immer die Anforderungen (Wünsche) der Benutzer erfüllen. Es ist also ganz wichtig, dass man sich vorab mit zukünftigen Nutzern unterhält und genau aufschreibt, was benötigt wird. Am besten macht man das indem man ganze Sätze aufschreibt. Hier ein Beispiel:
+Während der Übungsaufgabe hast du bereits etwas Wichtiges gelernt. Eine Software-Anwendung sollte immer die Anforderungen (Wünsche) der Benutzer erfüllen. Es ist also ganz wichtig, dass man sich vorab mit Benutzern unterhält und genau aufschreibt, was benötigt wird. Am besten macht man das, indem man ganze Sätze aufschreibt. Hier ein Beispiel:
 
 * Als ... möchte ich in der Lage sein ... mit Hilfe von ... das folgende zu tun ... damit ... .
 
-Einen solchen Satz, bzw. Paragraphen nennt man auch Benutzergeschichte (User Story).
+Einen solchen Satz, bzw. Paragraphen kann man auch Benutzergeschichte (User Story) nennen.
 
-Aus solchen Geschichten kann man folgendes herauslesen:
+Aus solchen Anforderungen (bzw. Geschichten) kann man folgendes herauslesen:
 
 * Wer hat die Anforderung?
 * Was soll erreicht werden?
@@ -20,12 +20,12 @@ Aus solchen Geschichten kann man folgendes herauslesen:
 
 ## Analyse
 
-Es gibt verschiedene Analyseverfahren um aus Anforderungen Anwendungen zu erstellen. Ich finde es am einfachsten Dinge (Objekte) und deren Funktionen aus den Anforderungen herauszulesen. 
+Es gibt verschiedene Analyseverfahren, um aus Anforderungen Anwendungen zu erstellen. Ich finde es am einfachsten, Dinge (Objekte) und deren Funktionen aus den Anforderungen herauszulesen.
 
 
 ## 1.) Objekte
 
-In unserer Übungsaufgabe haben wir das auch gemacht. Wenn wir über weiteren Anforderungen unserer TClone-Anwendung nachdenken, dann können wir die folgenden Objekttypen identifizieren:
+In unserer Übungsaufgabe haben wir das schon begonnen. Wenn wir über weiteren Anforderungen unserer TClone-Anwendung nachdenken, dann können wir die folgenden Objekttypen identifizieren:
 
 * Benutzer
 * Posts
@@ -35,7 +35,7 @@ In unserer Übungsaufgabe haben wir das auch gemacht. Wenn wir über weiteren An
 
 ## 2.) Objektbeziehungen
 
-Wir wollen außerdem wissen wir die Objekte zueinnander in Beziehung stehen:
+Wir wollen außerdem wissen wir die Objekte zueinander in Beziehung stehen:
 
 * Ein Benutzer erstellt Posts.
 * Ein Benutzer kann anderen Nutzern folgen.
@@ -44,7 +44,7 @@ Wir wollen außerdem wissen wir die Objekte zueinnander in Beziehung stehen:
 
 Normalerweise überlege ich hier auch schon wieviel mit wieviel in Beziehung steht. Wie viele Posts hat ein Nutzer (viele, wenig, genau einen)?
 
-## 3.) Objekteigenschaften 
+## 3.) Objekteigenschaften
 
 Im nächsten Schritt denken wir darüber nach, welche Eigenschaften die Objekte haben sollen. Hier einige Beispiele:
 
@@ -63,4 +63,4 @@ Was sollen die Objekte tun können? Hier wieder Beispiele:
 * Ein Post wird kommentiert
 * Ein Kommentar wird erstellt
 
-Wir schauen uns das Ganze nächste Woche nochmal genauer an wennn wir über objektorientierte Programmierung spechen.
+Das hier grob umrissene Verfahren nennt man auch ‘Objektorientierte Analyse’. Wir schauen uns das Ganze nächste Woche nochmal genauer an, wenn wir über objektorientierte Programmierung sprechen.

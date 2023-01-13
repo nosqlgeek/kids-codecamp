@@ -7,12 +7,12 @@ Dein Programm erfüllt also nun die folgenden Anforderungen:
 * Es soll möglich sein Posts einzugeben
 * Die Zeit der Eingabe muss erfasst werden
 
-Bisher ist führt die Eingabe von `R` (Posts lesen) aber nur zu der Augabe 'Posts:'. Wir müssen unsere Anforderungen also dementsprechend erweitern:
+Bisher führt die Eingabe von `R` (Posts lesen) aber nur zu der Ausgabe 'Posts:'. Wir müssen unsere Anforderungen also dementsprechend erweitern:
 
 * Alle Posts sollen angezeigt werden können
-* Die Anzahl der Besuche (lesen aller Posts) muß erfasst werden
+* Die Anzahl der Besuche (aller Posts mit einmal) muß erfasst werden
 
-Welche Aktionen müssem wir umsetzen?
+Welche Aktionen müssen wir umsetzen?
 
 * Posts anzeigen
 * Anzahl der Besuche anzeigen
@@ -22,7 +22,7 @@ Welche Aktionen müssem wir umsetzen?
 
 ### a.) Setzen von Werten in Abbildungen
 
-Erweitere das Programm `tclone.py` um das speichern der Posts in einer Abbildung (Dictionary), wobei der Post-Text anhand der Zeit abgelegt wird.
+Erweitere das Programm `tclone.py` um das Speichern der Posts in einer Abbildung (Dictionary), wobei der Post-Text anhand der Zeit abgelegt wird!
 
 ### b.) Iterieren über Abbildungen
 
@@ -46,4 +46,4 @@ Teste Dein Programm indem Du die folgenden Schritte durchführst:
 3. Gib 'R' (Posts lesen) ein und bestätige mit der Eingabetaste!
 4. Du solltest alle eingegebenen Posts sehen.
 5. Wiederhole den Schritt 3 einige male
-6. Gib 'S' (Besucherstatistik) ein und überprüfe den Wert! 
+6. Gib 'S' (Besucherstatistik) ein und überprüfe den Wert!
