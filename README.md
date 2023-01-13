@@ -61,14 +61,12 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 * [Komplexe Datentypen](./Wochen/2-Python/Artikel/KomplexeDatentypen.md)
 
 #### Übungsaufgaben
-
 1. [Übung 3: Ausführung eines Programms in VSCode](./Wochen/2-Python/Aufgaben/3-CodeAusfuehren.md)
 2. [Übung 4: Kontrollstrukturen](./Wochen/2-Python/Aufgaben/4-Kontrollstrukturen.md)
 3. [Übung 5: Datentypen](./Wochen/2-Python/Aufgaben/5-Datentypen.md)
 
 
 #### Projekt
-
-* TClone-Beiträge von der Kommandozeile
+* [Von Anforderungen zum Programm](./Wochen/2-Python/Artikel/VonAnforderungenZumProgramm.md)
 
 > Bis nächste Woche! Hier geht es bald weiter.
