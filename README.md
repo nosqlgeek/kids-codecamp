@@ -49,8 +49,8 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 1. Übung 1: [Von der Festplatte zur CPU](./Wochen/1-ProgrammierGrundlagen/Aufgaben/1-VonHDDzuCPU.md)
 2. Übung 2: [Ein Rechenprogramm mal anders](./Wochen/1-ProgrammierGrundlagen/Aufgaben/2-RechenprogrammAnders.md)
  
-#### Projekt
-* Ausblick auf das [TClone-Projekt](./Wochen/1-ProgrammierGrundlagen/Projekt/Projekt.md)
+#### Ausblick
+* Das [TClone-Projekt](./Wochen/1-ProgrammierGrundlagen/Projekt/Projekt.md)
  
 
 ### Woche 2 - Einführung in Python
@@ -66,7 +66,7 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 3. [Übung 5: Datentypen](./Wochen/2-Python/Aufgaben/5-Datentypen.md)
 
 
-#### Projekt
+#### Ausblick
 * [Von Anforderungen zum Programm](./Wochen/2-Python/Artikel/VonAnforderungenZumProgramm.md)
 
 > Bis nächste Woche! Hier geht es bald weiter.

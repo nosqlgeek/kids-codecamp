@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     #-  4.a.) Vervollständige: Solange die Aktion nicht 'Q' ist,  
     #- < Code hier >
-        # Die input-Funtion liest Tastatureingaben. \n seht für 'Neue Zeile auf der Ausgabe'
+        # Die Input-Funtion liest Tastatureingaben. \n seht für 'Neue Zeile auf der Ausgabe'
         aktion = input('Was möchtest Du tun? \n [P - Post erstellen, R - Posts lesen, Q - Beenden] \n Eingabe: ')
 
         # - 4.b.1.) Prüfe ob die Eingabe 'P' ist
@@ -27,7 +27,7 @@ if __name__ == '__main__':
             #- 5.b.) Gebe alle Posts aus. Hier eine Beispielzeile: `2023-01-13 10:24:46.832755: Hello`.
             #- < Code hier >
 
-            #- 5.c.) Zähle wie oft die Posts ausgegeben wurden. Erweitere das Programm um eine Aktion zur Ausgabe der Anzahl der Besuche. 
+            #- 5.c.) Zähle wie oft die Posts ausgegeben wurden! Erweitere das Programm um eine Aktion zur Ausgabe der Anzahl der Besuche. 
             #- < Code hier >
         #- 4.b.3.) Prüfe ob die Eingabe 'Q' ist 
         #- < Code hier >

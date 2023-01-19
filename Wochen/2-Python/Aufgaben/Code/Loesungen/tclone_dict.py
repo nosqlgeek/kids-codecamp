@@ -11,7 +11,7 @@ if __name__ == '__main__':
     aktion = None
 
     while aktion != 'Q':
-        # Die input-Funtion liest Tastatureingaben
+        # Die Input-Funtion liest Tastatureingaben
         # \n seht für 'Neue Zeile auf der ausgabe'
         aktion = input('Was möchtest Du tun? \n [P - Post erstellen, R - Posts lesen, Q - Beenden, S - Besucherstatistik] \n Eingabe: ')
 
