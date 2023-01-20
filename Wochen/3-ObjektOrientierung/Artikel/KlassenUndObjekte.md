@@ -1,10 +1,10 @@
 # Klassen und Objekte
 
-Unser Fokus letzte Woche war auf Kontrollstrukturen. Diese Woche wollen wir uns näher mit Objektorientierung beschäftigen. Am Ende der letzten Stunde hatten wir uns auch schon angeschaut was Objektorientierte Analyse ist und wie sie grundlegend funktioniert.
+Unser Fokus letzte Woche war auf Kontrollstrukturen. Diese Woche wollen wir uns näher mit Objektorientierung beschäftigen. Am Ende der letzten Stunde haben wir uns auch schon angeschaut, was Objektorientierte Analyse ist und wie sie grundlegend funktioniert.
 
 ## Was ist ein Objekt?
 
-Du fragst Dich sicher, was wir mit Objekt meinen. Letztendlich helfen uns Computer echte Probleme aus der realen Welt zu lösen. Du kannst Dir ein Objekt also als einen Gegenstand der realen Welt vorstellen. Mein Auto, zum Beispiel ist ein Objekt. Hier eine Beschreibung meines Autos:
+Du fragst Dich sicher, was wir mit Objekt meinen. Letztendlich helfen uns Computer, echte Probleme aus der realen Welt zu lösen. Du kannst dir ein Objekt also als einen Gegenstand der realen Welt vorstellen. Mein Auto ist zum Beispiel ein Objekt. Hier eine Beschreibung meines Autos:
 
 * **Marke**: Citroen
 * **Modell:**: C4 Spacetourer
@@ -14,7 +14,7 @@ Du fragst Dich sicher, was wir mit Objekt meinen. Letztendlich helfen uns Comput
 * **Anzahl der Gänge**: 6
 * **Kraftstoff**: Benzin
 
-Ein Objekt kann außerdem Funktion haben. Hier einige Beispiele:
+Ein Objekt kann außerdem Funktionen haben. Hier einige Beispiele:
 
 * Lenken
 * Bremsen
@@ -25,23 +25,23 @@ Wenn eine Funktion einem Objekt zugeordnet ist, nennen wir sie auch 'Methode'.
 
 ## Was ist eine Klasse?
 
-Ich könnte jetzt die gleichen Eigenschaften verwenden um ein anderes Auto zu beschreiben, z.B.: 
+Ich könnte jetzt die gleichen Eigenschaften verwenden um ein anderes Auto zu beschreiben, z.B.:
 
 * VW Passat, 5 Sitze, Automatik, 5 Gänge, Diesel
 
-Die Vorlage (z.B., Auto: Marke, Modell, Anzahl Sitze, usw.), welche ich verwende um die Eigenschaften und Funktionen eines Objets zu beschreiben nennt man auch Objektklasse (kurz Klasse) oder Objekttyp.
+Die Vorlage (z.B., Auto: Marke, Modell, Anzahl Sitze, usw.), welche ich verwende, um die Eigenschaften und Funktionen eines Objekts zu beschreiben, nennt man auch Objektklasse (kurz Klasse) oder Objekttyp.
 
 ## Beziehungen zwischen Objekten
 
 ### Direkte Beziehung
 
-Ein Auto ist kein einzelner Gegenstand, sondern es ist eine Ansammlung von Objekten, welche zusammen arbeiten. Mein Auto hat z.B.:
+Ein Auto ist kein einzelner Gegenstand, sondern es ist eine Ansammlung von Objekten, die zusammen arbeiten. Mein Auto hat z.B.:
 
 * Lenkrad, dass sich drehen lässt
 * Getriebe, dass sich schalten lässt
 * Räder, die sich drehen
 
-Wir sollten außerdem nachdenken wieviel von etwas mit etwas anderem in Beziehung steht. Hier einige Beispiele:
+Wir sollten außerdem nachdenken, wie viel von etwas mit etwas anderem in Beziehung steht. Hier einige Beispiele:
 
 * Ein Auto hat genau ein Lenkrad. Ein Lenkrad gehört genau zu einem Auto.
 * Mein Auto hat vier Räder montiert. Jedes Rad ist genau an einem Auto montiert.
@@ -53,7 +53,7 @@ Wir sollten außerdem nachdenken wieviel von etwas mit etwas anderem in Beziehun
 
 ### Spezialisierung
 
-Es gibt natürlich nicht nur eine Art von Auto. In gewisserweise ist PKW (Personenkraftwagen = normales Auto) bereits eine Spezialform des Kraftwagens. Eine andere Spezialisierung ist ein LKW (Lastkraftwagen). Wir könnten also folgene Spezialisierungen als Beispieke notieren:
+Es gibt natürlich nicht nur eine Art von Auto. In gewisser Weise ist PKW (Personenkraftwagen = normales Auto) bereits eine Spezialform des Kraftwagens. Eine andere Spezialisierung ist ein LKW (Lastkraftwagen). Wir könnten also folgende Spezialisierungen als Beispiele notieren:
 
 ```
 +- Kraftwagen
@@ -66,7 +66,7 @@ Es gibt natürlich nicht nur eine Art von Auto. In gewisserweise ist PKW (Person
 +------ Kipplaster
 ```
 
-Im allgemeinen hat ein Kraftwagen natürlich Räder, Sitze und soweiter. Es wäre also sinnvoll eine Klasse Kraftwagen zu definieren und alle anderen Klassen auf dieser Klasse basieren zu lassen.
+Im Allgemeinen hat ein Kraftwagen natürlich Räder, Sitze und so weiter. Es wäre also sinnvoll eine Klasse Kraftwagen zu definieren und alle anderen Klassen auf dieser Klasse basieren zu lassen.
 
 
 * Kraftwagen

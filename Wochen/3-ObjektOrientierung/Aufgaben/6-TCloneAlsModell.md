@@ -1,4 +1,4 @@
-# 6.) Objektorientiere Programmierung
+# 6.) Objektorientierte Programmierung
 
 ## a.) Vervollständige eine existierende Klasse
 
@@ -12,12 +12,12 @@ Das Beispiel zeigt eine unvollständige `Benutzer`-Klasse.
 
 1. Schau Dir die Klasse `Nachricht` an!
 2. Leite eine neue Klasse `Kommentar` ab! Ein Kommentar ist eine Nachricht die zu einem Post gehört.
-3. Bitte leite eine neue Klasse `Post` ab! Ein Post kann mehrere Kommentare haben. Bei Erstellung hat er keine Kommentate. In einem Post können andere Nutzer genannt werden. Diese Nennungen sollen hier einfach als Liste der Kurznamen der Benutzer umgesetzt werden.
+3. Bitte leite eine neue Klasse `Post` ab! Ein Post kann mehrere Kommentare haben. Bei Erstellung hat er keine Kommentare. In einem Post können andere Nutzer genannt werden. Diese Nennungen sollen hier einfach als Liste der Kurznamen der Benutzer umgesetzt werden.
 
 
 ## c.) Eine neue Klasse
 
-Eine Besucherstatistik gehört zu einem Post. Die Statisitk hat die Egenschaften:
+Eine Besucherstatistik gehört zu einem Post. Die Statistik hat die Eigenschaften:
 
 * Anzahl der Besuche
 * Anzahl der Besucher (Benutzer die den Post besucht haben)
