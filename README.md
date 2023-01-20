@@ -65,8 +65,19 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 2. [Übung 4: Kontrollstrukturen](./Wochen/2-Python/Aufgaben/4-Kontrollstrukturen.md)
 3. [Übung 5: Datentypen](./Wochen/2-Python/Aufgaben/5-Datentypen.md)
 
-
 #### Ausblick
 * [Von Anforderungen zum Programm](./Wochen/2-Python/Artikel/VonAnforderungenZumProgramm.md)
 
 > Bis nächste Woche! Hier geht es bald weiter.
+
+### Woche 3 - Funktionen und Objekte
+
+#### Theorie
+
+* [Funktionen](./Wochen/3-ObjektOrientierung/Artikel/Funktionen.md)
+* [Klassen und Objekte](./Wochen/3-ObjektOrientierung/Artikel/KlassenUndObjekte.md)
+* [Klassen und Objekte in Python](./Wochen/3-ObjektOrientierung/Artikel/KlassenUndObjekteInPython.md)
+
+#### Übungsaufgaben
+
+1. [Übung 6: Das TClone Datenmodell](./Wochen/3-ObjektOrientierung/Aufgaben/6-TCloneAlsModell.md)
