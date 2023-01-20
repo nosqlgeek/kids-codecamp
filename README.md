@@ -68,8 +68,6 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 #### Ausblick
 * [Von Anforderungen zum Programm](./Wochen/2-Python/Artikel/VonAnforderungenZumProgramm.md)
 
-> Bis nächste Woche! Hier geht es bald weiter.
-
 ### Woche 3 - Funktionen und Objekte
 
 #### Theorie
@@ -81,3 +79,6 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 #### Übungsaufgaben
 
 1. [Übung 6: Das TClone Datenmodell](./Wochen/3-ObjektOrientierung/Aufgaben/6-TCloneAlsModell.md)
+
+
+> Bis nächste Woche! Hier geht es bald weiter.

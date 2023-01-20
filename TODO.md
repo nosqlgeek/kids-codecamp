@@ -39,12 +39,13 @@
 * Create a post and store it in Redis
 * Add a comment and store it
 
-> TODO
 #### Project
 
 * Demo the full solution, including test cases
 * More insights into debugging
 * Outlook to the web app
+
+> TODO
 
 ### Sesssion 4 - Web App development with Python
 #### Theory

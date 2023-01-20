@@ -52,8 +52,20 @@ class Post(Nachricht):
     #-  6.b) Vervollständige:  
     #- < Code hier >
 
+
+'''
+Eine Besucherstatistik gehört zu einem Post.
+Die Statisitk hat die Egenschaften:
+
+* Anzahl der Besuche
+* Anzahl der Besucher (Benutzer die den Post besucht haben)
+
+Um die Anzahl der Besucher zu bestimmen wird eine Menge von Benutzer-Kurznamen verwendet.
+'''
 #-  6.c.) Schreibe eine Klasse 'Statistik'
 #- < Code hier >
+
+
 
 #- 6.d.) Übernehme das Hauptprogramm aus der vorherigen Aufgabe und passe es
 #        so an, dass es Objekte verwendet.
