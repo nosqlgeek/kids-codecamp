@@ -39,6 +39,7 @@
 * Create a post and store it in Redis
 * Add a comment and store it
 
+> TODO
 #### Project
 
 * Demo the full solution, including test cases
