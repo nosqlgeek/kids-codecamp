@@ -1,7 +1,7 @@
 # Imports
 from datetime import datetime
 
-# Globale Variablen
+# Globale Variablen  
 posts = {}
 
 # Start
