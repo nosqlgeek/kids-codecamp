@@ -1,0 +1,1 @@
+export PATH=$PATH:/Users/davidmaiernosqlgeeks/Library/Python/3.9/bin
