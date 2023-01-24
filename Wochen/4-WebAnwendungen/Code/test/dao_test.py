@@ -5,22 +5,30 @@ sys.path.append('..')
 from datetime import datetime
 
 # Imports
-import server.dao as dao
+import server.datenbank as datenbank
 from server.model import Benutzer, Post, Kommentar, Statistik
 
-# Sleep one second and return the time
+# Eine Sekunde schlafen und dann die aktuelle Zeit geben
 def aktuelle_zeit():
     time.sleep(1)
     return int(datetime.now().timestamp())
-    
+
+# Einige Tests benötigen einen Benutzer
+def benutzer_erstellen():
+    benutzer = Benutzer('@nosqlgeek', 'David', 'Maier', 'david@nosqlgeeks.de')
+    benutzer.speichern()
+    return benutzer
+
 def test_benutzer():
+    datenbank.loeschen()
     nutzer_zu_db = Benutzer('@nosqlgeek', 'David', 'Maier', 'david@nosqlgeeks.de')
     nutzer_zu_db.speichern()
     nutzer_von_db = Benutzer('@nosqlgeek').abrufen()
     assert str(nutzer_von_db.daten()) == "{'typ': 'nutzer', 'id': '@nosqlgeek', 'kurzname': '@nosqlgeek', 'vorname': 'David', 'nachname': 'Maier', 'email': 'david@nosqlgeeks.de'}"
 
 def test_post():
-    benutzer = Benutzer('@nosqlgeek').abrufen()
+    datenbank.loeschen()
+    benutzer = benutzer_erstellen()
     zeit = aktuelle_zeit()
     post_zu_db = Post(benutzer, zeit, 'Hello @julia!', nennugen=['@julia'])
     post_zu_db.speichern()
@@ -32,8 +40,8 @@ def test_post():
     assert '@julia' in post_von_db.nennungen
 
 def test_post_statistik():
-    
-    benutzer = Benutzer('@nosqlgeek').abrufen()
+    datenbank.loeschen()
+    benutzer = benutzer_erstellen()
     zeit = aktuelle_zeit()
     post_zu_db = Post(benutzer, zeit, 'Hello @alex!', nennugen=['@alex'])
     post_zu_db.statistik.besuche('@nosqlgeek')
@@ -45,9 +53,18 @@ def test_post_statistik():
     assert post_von_db.statistik.anzahl_besuche == 3
     assert post_von_db.statistik.anzahl_besucher == 2
 
+def test_post_abfrage():
+    datenbank.loeschen()
+    datenbank.indizes_erstellen()
+    benutzer = benutzer_erstellen()
+    post = Post(benutzer, aktuelle_zeit(), 'Hi everyone!')
+    post.speichern()
+    assert 0 != len(post.abfragen())
 
 def test_post_kommentare():
-    benutzer = Benutzer('@nosqlgeek').abrufen()
+    datenbank.loeschen()
+    datenbank.indizes_erstellen()
+    benutzer = benutzer_erstellen()
     zeit1 = aktuelle_zeit()
     zeit2 = aktuelle_zeit()
     post_zu_db = Post(benutzer, zeit1, 'Hallo Welt!')
@@ -62,4 +79,5 @@ def test_post_kommentare():
     assert kommentar_von_db.text == 'Netter post!'
     assert kommentar_von_db.benutzer.id == benutzer.id
 
-
+    abgefragter_post_kommentar = post_von_db.abfragen()[0].kommentare[0]
+    assert abgefragter_post_kommentar.benutzer.id == benutzer.id

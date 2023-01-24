@@ -37,5 +37,5 @@ class Daten:
     '''
     Frage nach Objekten des gleichen Typs
     '''
-    def abfragen(self, abfrage):
-        return datenbank.abfragen('@typ:' + self.typ + ' ' + abfrage)
+    def abfragen(self, abfrage='*'):
+        return datenbank.abfragen(self.typ, abfrage)

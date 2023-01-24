@@ -55,7 +55,6 @@ class Kommentar(Nachricht):
         
 
 
-
 '''
 Ein Post ist eine Nachricht.
 Ein Post kann mehrere Kommentare haben. Bei Erstellung hat er keine Kommentate.
@@ -119,15 +118,31 @@ class Post(Nachricht):
             kommentar_ids = d['kommentare'].split(',')
         
         for k in kommentar_ids:
-            id_as_list = k.split(':')
-            kommentator = Benutzer(id_as_list[2]).abrufen()
-            kommentar_zeit = int(id_as_list[3])
+            id_als_liste = k.split(':')
+            kommentator = Benutzer(id_als_liste[2]).abrufen()
+            kommentar_zeit = int(id_als_liste[3])
             kommentare.append(Kommentar(kommentator, kommentar_zeit, post=self).abrufen())
         
         post = Post(benutzer, int(d['zeit']), d['text'], kommentare, nennungen)
         post.statistik = statistik
         return post
     
+    '''
+    Die Elternklasse gibt eine Liste von ID-s zurück. Wir wollen aber eine Liste von Posts.
+    '''
+    def abfragen(self, abfrage='*'):
+        ids = super().abfragen(abfrage)
+
+        posts = []
+
+        for id in ids:
+            id_als_liste = id.split(':')
+            kurzname = id_als_liste[1]
+            zeit = int(id_als_liste[2])
+            post = Post(Benutzer(kurzname),zeit).abrufen()
+            posts.append(post)
+
+        return posts
 
 '''
 Eine Besucherstatistik gehört zu einem Post. 
