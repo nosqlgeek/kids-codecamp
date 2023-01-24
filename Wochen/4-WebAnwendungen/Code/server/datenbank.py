@@ -69,11 +69,11 @@ def abfragen(typ, abfrage):
     index_name = 'index:{}'.format(typ)    
     docs = r.ft(index_name).search(Query(abfrage).no_content()).docs
 
-    # Ein wenig Funktionale Programmierung
+    # Ein wenig funktionale Programmierung
     # 
-    # Die Funktion map bildet jedes Element einer Kollektion
-    # von Elementen auf ein anderes Element ab. Das `lambda` bedeutet, dass wir hier eine Funktion zur
-    # Abbildung benutzen, welche wir vorher nicht definiert haben. Die Funktion bildet das Ergebnisdokument 
-    # zur ID Ergebnisdokuments ab. Wir erhalten also eine Liste von ID-s.
+    # Die Funktion `map`` bildet jedes Element einer Kollektion von Elementen auf ein anderes 
+    # Element ab. Das `lambda` bedeutet, dass wir hier eine Funktion zur Abbildung benutzen, 
+    # welche wir vorher nicht definiert haben. Die Funktion bildet das Ergebnisdokument zur ID 
+    # des Ergebnisdokuments ab. Wir erhalten also eine Liste von ID-s.
     return list(map(lambda d: d.id, docs))
 
