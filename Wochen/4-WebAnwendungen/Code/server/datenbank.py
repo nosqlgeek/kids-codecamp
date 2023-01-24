@@ -38,7 +38,7 @@ def index_erstellen(typ, schema):
 Die Datenbank will wissen was indiziert werden soll und welchen Datentyp die Eigenschaften haben
 '''
 def indizes_erstellen():
-    post_schema = (TagField('kurzname'),TextField('text'), NumericField('zeit'))
+    post_schema = (TagField('benutzer'),TextField('text'), NumericField('zeit'))
     nutzer_schema = (TagField('kurzname'), TextField('vorname'), TextField('nachname'), TagField('email'))
     index_erstellen('post', post_schema)
     index_erstellen('nutzer', nutzer_schema)

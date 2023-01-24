@@ -15,5 +15,6 @@ import test.dao_test as dao_test
 
 if __name__ == '__main__':
     print("START: Debug-Sitzung")
-    # Test query
-    #dao_test.test_post_kommentare()
+    
+    # Testfall
+    dao_test.test_post_abfrage()

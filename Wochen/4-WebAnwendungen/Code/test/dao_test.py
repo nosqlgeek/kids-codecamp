@@ -15,38 +15,38 @@ def aktuelle_zeit():
 
 # Einige Tests benötigen einen Benutzer
 def benutzer_erstellen():
-    benutzer = Benutzer('@nosqlgeek', 'David', 'Maier', 'david@nosqlgeeks.de')
+    benutzer = Benutzer('nosqlgeek', 'David', 'Maier', 'david@nosqlgeeks.de')
     benutzer.speichern()
     return benutzer
 
 def test_benutzer():
     datenbank.loeschen()
-    nutzer_zu_db = Benutzer('@nosqlgeek', 'David', 'Maier', 'david@nosqlgeeks.de')
+    nutzer_zu_db = Benutzer('nosqlgeek', 'David', 'Maier', 'david@nosqlgeeks.de')
     nutzer_zu_db.speichern()
-    nutzer_von_db = Benutzer('@nosqlgeek').abrufen()
-    assert str(nutzer_von_db.daten()) == "{'typ': 'nutzer', 'id': '@nosqlgeek', 'kurzname': '@nosqlgeek', 'vorname': 'David', 'nachname': 'Maier', 'email': 'david@nosqlgeeks.de'}"
+    nutzer_von_db = Benutzer('nosqlgeek').abrufen()
+    assert str(nutzer_von_db.daten()) == "{'typ': 'nutzer', 'id': 'nosqlgeek', 'kurzname': 'nosqlgeek', 'vorname': 'David', 'nachname': 'Maier', 'email': 'david@nosqlgeeks.de'}"
 
 def test_post():
     datenbank.loeschen()
     benutzer = benutzer_erstellen()
     zeit = aktuelle_zeit()
-    post_zu_db = Post(benutzer, zeit, 'Hello @julia!', nennugen=['@julia'])
+    post_zu_db = Post(benutzer, zeit, 'Hello @julia!', nennugen=['julia'])
     post_zu_db.speichern()
     post_von_db = Post(benutzer, zeit).abrufen()
     
     assert post_von_db.zeit == zeit
     assert post_von_db.benutzer.kurzname == benutzer.kurzname
     assert post_von_db.text == 'Hello @julia!'
-    assert '@julia' in post_von_db.nennungen
+    assert 'julia' in post_von_db.nennungen
 
 def test_post_statistik():
     datenbank.loeschen()
     benutzer = benutzer_erstellen()
     zeit = aktuelle_zeit()
-    post_zu_db = Post(benutzer, zeit, 'Hello @alex!', nennugen=['@alex'])
-    post_zu_db.statistik.besuche('@nosqlgeek')
-    post_zu_db.statistik.besuche('@julia')
-    post_zu_db.statistik.besuche('@julia')
+    post_zu_db = Post(benutzer, zeit, 'Hello @alex!', nennugen=['alex'])
+    post_zu_db.statistik.besuche('nosqlgeek')
+    post_zu_db.statistik.besuche('julia')
+    post_zu_db.statistik.besuche('julia')
     post_zu_db.speichern()
     post_von_db = Post(benutzer, zeit).abrufen()
 

@@ -19,6 +19,15 @@ class Benutzer(Daten):
         daten = super().abrufen()
         return Benutzer(daten['kurzname'],daten['vorname'], daten['nachname'], daten['email'])
 
+    def abfragen(self, abfrage='*'):
+        ids =  super().abfragen(abfrage)
+        benutzer = []
+        for i in ids:
+            kurzname = i.split(':')[1]
+            benutzer.append(Benutzer(kurzname).abrufen().daten())
+        
+        return benutzer
+
         
 
 '''
@@ -129,8 +138,13 @@ class Post(Nachricht):
     
     '''
     Die Elternklasse gibt eine Liste von ID-s zurück. Wir wollen aber eine Liste von Posts.
+    Außerdem wollen wir die Liste der Posts auf den Nutzer des Posts einschränken
     '''
     def abfragen(self, abfrage='*'):
+        
+        if self.benutzer.kurzname != '_jeder_':
+            abfrage = '@benutzer:{' + self.benutzer.kurzname + '}'
+       
         ids = super().abfragen(abfrage)
 
         posts = []
