@@ -7,11 +7,15 @@ import server.datenbank as datenbank
 
 # Tests
 def test_verbinden():
+    datenbank.loeschen()
     db = datenbank.verbinden()
     # Überprüfe ob eine Bedingung wahr ist
     assert db.set('test', 'success') == True
     assert db.get('test') == 'success'
 
 def test_abfragen():
-    assert str(datenbank.abfragen('post','*')) == "Result{0 total, docs: []}"
+    datenbank.loeschen()
+    datenbank.verbinden()
+    datenbank.indizes_erstellen()
+    assert datenbank.abfragen('post','*') == []
     
