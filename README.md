@@ -54,7 +54,6 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
  
 
 ### Woche 2 - Einführung in Python
-
 #### Theorie
 * [Wiederholung Kontrollstrukturen](./Wochen/2-Python/Artikel/Kontrollstrukturen.md)
 * [Einfache Datentypen](./Wochen/2-Python/Artikel/EinfacheDatentypen.md)
@@ -69,7 +68,6 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 * [Von Anforderungen zum Programm](./Wochen/2-Python/Artikel/VonAnforderungenZumProgramm.md)
 
 ### Woche 3 - Funktionen und Objekte
-
 #### Theorie
 
 * [Funktionen](./Wochen/3-ObjektOrientierung/Artikel/Funktionen.md)

@@ -39,8 +39,10 @@ Die Datenbank will wissen was indiziert werden soll und welchen Datentyp die Eig
 '''
 def indizes_erstellen():
     post_schema = (TagField('benutzer'),TextField('text'), NumericField('zeit'))
+    kommentar_schema = (TagField('benutzer'),TextField('text'), NumericField('zeit'), TagField('post'))
     nutzer_schema = (TagField('kurzname'), TextField('vorname'), TextField('nachname'), TagField('email'))
     index_erstellen('post', post_schema)
+    index_erstellen('kommentar', kommentar_schema)
     index_erstellen('nutzer', nutzer_schema)
 
 def verbinden():

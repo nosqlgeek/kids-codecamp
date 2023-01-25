@@ -10,11 +10,18 @@ class Daten:
         self.typ = typ
         self.id = id
 
+
+    '''
+    Ermittle den Datenbakschlüssel für das Objekt
+    '''
+    def schluessel_in_db(self):
+        return '{}:{}'.format(self.typ, self.id)
+
     '''
     Rufe ein Objekt anhand seines Typs und seiner ID ab
     '''
     def abrufen(self):
-        schluessel = '{}:{}'.format(self.typ, self.id)
+        schluessel = self.schluessel_in_db()
         print('Rufe Daten mit Schlüssel {} ab.'.format(schluessel))
         return datenbank.verbinden().hgetall(schluessel)
 
@@ -22,7 +29,7 @@ class Daten:
     Speichere die Daten eines Objekts anhand des Typs und der ID
     '''
     def speichern(self):
-        schluessel = '{}:{}'.format(self.typ, self.id)
+        schluessel = self.schluessel_in_db()
         print('Wird unter Schlüssel {} gespeichert.'.format(schluessel))
         return datenbank.verbinden().hset(schluessel, mapping=self.daten())
 
@@ -39,3 +46,10 @@ class Daten:
     '''
     def abfragen(self, abfrage='*'):
         return datenbank.abfragen(self.typ, abfrage)
+
+    '''
+    Prüfe ob das Objekt bereits in der Datenbank existiert
+    '''
+    def existiert_schon(self):
+        schluessel = self.schluessel_in_db()
+        return int(datenbank.verbinden().exists(schluessel)) == 1

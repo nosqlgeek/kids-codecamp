@@ -45,7 +45,7 @@ class Nachricht(Daten):
 Ein Kommentar ist eine Nachricht die zu einem Post gehört.
 '''
 class Kommentar(Nachricht):
-    def __init__(self, benutzer, zeit, post, text=""):
+    def __init__(self, benutzer, zeit, post, text=''):
         super().__init__(benutzer, zeit, text)
         self.typ = 'kommentar'
         self.id = '{}:{}'.format(post.id, self.id)
