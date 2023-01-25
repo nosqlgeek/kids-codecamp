@@ -23,22 +23,19 @@ def benutzer_erstellen():
 @pytest.fixture(autouse=True, scope='function')
 def setup():
     #Am Anfang
-    print('Einrichten der Testsuite ...')
+    print('Einrichten des Tests ...')
     datenbank.loeschen()
     datenbank.indizes_erstellen()
     yield
     #Am Ende
 
-
 def test_benutzer():
-    #datenbank.loeschen()
     nutzer_zu_db = Benutzer('nosqlgeek', 'David', 'Maier', 'david@nosqlgeeks.de')
     nutzer_zu_db.speichern()
     nutzer_von_db = Benutzer('nosqlgeek').abrufen()
     assert str(nutzer_von_db.daten()) == "{'typ': 'nutzer', 'id': 'nosqlgeek', 'kurzname': 'nosqlgeek', 'vorname': 'David', 'nachname': 'Maier', 'email': 'david@nosqlgeeks.de'}"
 
 def test_post():
-    #datenbank.loeschen()
     benutzer = benutzer_erstellen()
     zeit = aktuelle_zeit()
     post_zu_db = Post(benutzer, zeit, 'Hello @julia!', nennugen=['julia'])
@@ -51,7 +48,6 @@ def test_post():
     assert 'julia' in post_von_db.nennungen
 
 def test_post_statistik():
-    #datenbank.loeschen()
     benutzer = benutzer_erstellen()
     zeit = aktuelle_zeit()
     post_zu_db = Post(benutzer, zeit, 'Hello @alex!', nennugen=['alex'])
@@ -65,15 +61,12 @@ def test_post_statistik():
     assert post_von_db.statistik.anzahl_besucher == 2
 
 def test_post_abfrage():
-    #datenbank.loeschen()
-    #datenbank.indizes_erstellen()
     benutzer = benutzer_erstellen()
     post = Post(benutzer, aktuelle_zeit(), 'Hi everyone!')
     post.speichern()
     assert 0 != len(post.abfragen())
 
 def test_post_kommentare():
-    #datenbank.loeschen()
     benutzer = benutzer_erstellen()
     zeit1 = aktuelle_zeit()
     zeit2 = aktuelle_zeit()
