@@ -126,9 +126,21 @@ def kommentar_post():
 '''
 Kommentare eines Posts abrufen
 '''
-@app.route('/post/<post_id>/kommentare')
-def post_kommentare():
-    print("TODO")
+@app.route('/post/<post_id>/kommentare', methods=['GET'])
+def post_kommentare(post_id):
+    id_als_liste = post_id.split(':')
+    benutzer=Benutzer(id_als_liste[0])
+    zeit=int(id_als_liste[1])
+
+    post = Post(benutzer, zeit).abrufen()
+
+    if not post.existiert_schon():
+        abort(500)
+    else:
+        kommentare = []
+        for k in post.kommentare:
+            kommentare.append(k.daten())
+        return kommentare
 
 #-- Benutzer
 '''

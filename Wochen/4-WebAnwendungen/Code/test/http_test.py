@@ -54,8 +54,12 @@ def test_kommentar_erstellen():
     post_daten = {'benutzer': 'alexg', 'zeit': post_zeit, 'text' : 'Hallo @nosqlgeek!'}
     requests.post('http://localhost:5000/post', json=post_daten)
 
-    #def __init__(self, benutzer, zeit, post, text=""):
     kommentar_daten = {'benutzer': 'nosqlgeek', 'zeit': int(datetime.now().timestamp()), 'text' : 'Hi @alexg, wie geht es Dir?', 'post': 'alexg:{}'.format(post_zeit)}
     antwort = requests.post('http://localhost:5000/kommentar', json=kommentar_daten)
     print(antwort.content)
     assert antwort.status_code == 200
+
+    kommentare_antwort = requests.get('http://localhost:5000/post/{}/kommentare'.format(kommentar_daten['post']))
+    print(kommentare_antwort.content)
+    assert kommentare_antwort.status_code == 200
+
