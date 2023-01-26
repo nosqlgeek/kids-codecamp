@@ -1,12 +1,17 @@
 import json
 from server.model import Post, Benutzer, Kommentar
 import server.datenbank as datenbank
-from flask import Flask, jsonify, request, abort
+from flask import Flask, request, abort, send_from_directory
 import re
 
 app = Flask(__name__)
 
+# -- Die Web-Anwendung
+@app.route('/<path:path>', methods=['GET'])
+def web(path):
+    return send_from_directory('web', path)
 
+# -- Helfer
 '''
 Die Datenbank speichert unsere Listen als Komma-seperarierte Tags
 '''
@@ -44,9 +49,15 @@ def interner_fehler(error):
 '''
 Posts aller Nutzer abrufen
 '''
-@app.route('/posts', methods=['GET'])
+@app.route('/api/posts', methods=['GET'])
 def posts():
-    posts = Post(Benutzer('_jeder_'),-1).abfragen()
+    search = request.args.get('search')
+    abfrage = '*'
+    if search != None:
+        abfrage=search
+
+    posts = Post(Benutzer('_jeder_'),-1).abfragen(abfrage)
+
     antwort = []
     for post in posts:
         antwort.append(post_zu_json(post))
@@ -55,7 +66,7 @@ def posts():
 '''
 Posts eines Nutzers abrufen
 '''
-@app.route('/benutzer/<kurzname>/posts', methods=['GET'])
+@app.route('/api/benutzer/<kurzname>/posts', methods=['GET'])
 def benutzer_posts(kurzname):
     posts = Post(Benutzer(kurzname),-1).abfragen()
     antwort = []
@@ -66,12 +77,12 @@ def benutzer_posts(kurzname):
 '''
 Post erstellen
 '''
-@app.route('/post', methods=['POST'])
+@app.route('/api/post', methods=['POST'])
 def post_post():
     d = request.json
     text = d['text']
     benutzer = Benutzer(d['benutzer'])
-    post = Post(benutzer, d['zeit'], d['text'])
+    post = Post(benutzer, d['zeit'], text)
 
     # Wenn der Post schon existiert, dann wollen wir ihn nicht anlegen
     if post.existiert_schon():
@@ -99,7 +110,7 @@ def post_post():
 '''
 Kommentar erstellen
 '''
-@app.route('/kommentar', methods=['POST'])
+@app.route('/api/kommentar', methods=['POST'])
 def kommentar_post():
     #def __init__(self, benutzer, zeit, post, text=""):
     d = request.json
@@ -115,7 +126,8 @@ def kommentar_post():
     if  not (post.existiert_schon() and benutzer.existiert_schon()):
         abort(500)
     else:
-        post.abrufen()
+        post = post.abrufen()
+        print("text = {}".format(post.text))
         benutzer.abrufen()
         kommentar = Kommentar(benutzer,zeit,post,text)
         kommentar.speichern()
@@ -126,7 +138,7 @@ def kommentar_post():
 '''
 Kommentare eines Posts abrufen
 '''
-@app.route('/post/<post_id>/kommentare', methods=['GET'])
+@app.route('/api/post/<post_id>/kommentare', methods=['GET'])
 def post_kommentare(post_id):
     id_als_liste = post_id.split(':')
     benutzer=Benutzer(id_als_liste[0])
@@ -146,7 +158,7 @@ def post_kommentare(post_id):
 '''
 Alle Benutzer abrufen
 '''
-@app.route('/benutzer', methods=['GET'])
+@app.route('/api/benutzer', methods=['GET'])
 def benutzer_alle():
     benutzer = Benutzer('_jeder_').abfragen()
     antwort = []
@@ -158,7 +170,7 @@ def benutzer_alle():
 '''
 Details eines Nutzers abrufen
 '''
-@app.route('/benutzer/<kurzname>', methods=['GET'])
+@app.route('/api/benutzer/<kurzname>', methods=['GET'])
 def benutzer_get(kurzname):
     try:
         nutzer = Benutzer(kurzname).abrufen()
@@ -169,7 +181,7 @@ def benutzer_get(kurzname):
 '''
 Nutzer erstellen oder aktualisieren
 '''
-@app.route('/benutzer/<kurzname>', methods=['PUT'])
+@app.route('/api/benutzer/<kurzname>', methods=['PUT'])
 def benutzer_put(kurzname):
     d = request.json
     print(str(d))

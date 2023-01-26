@@ -31,6 +31,7 @@ class Daten:
     def speichern(self):
         schluessel = self.schluessel_in_db()
         print('Wird unter Schlüssel {} gespeichert.'.format(schluessel))
+        print('daten = {}'.format(self.daten()))
         return datenbank.verbinden().hset(schluessel, mapping=self.daten())
 
     '''

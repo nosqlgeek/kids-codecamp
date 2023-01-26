@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TClone</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+</head>
+
+<!-- Dialoge -->
+<div id="login-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Einloggen</h5>
+              <button id="login-close-button" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input id="login-input" placeholder="Kurzname?" style="width: 100%;"></input>
+            </div>
+            <div class="modal-footer">
+              <button id="login-button" type="button" class="btn btn-primary">Einloggen</button>
+            </div>
+          </div>
+        </div>
+</div>
+
+<div id="post-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Neuer Post</h5>
+          <button id="post-close-button" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <textarea id="post-text" placeholder="Text?" style="width: 100%;"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button id="post-button" type="button" class="btn btn-primary">Posten</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<body>
+    <div class="container" style="background: var(--bs-gray-dark);">
+        <!-- Navigation -->
+        <div class="row" style="background: var(--bs-info);">
+            <div class="col-4">
+                <nav class="navbar navbar-light navbar-expand-lg navigation-clean-search" style="background: var(--bs-info);">
+                    <div class="container"><a class="navbar-brand" href="#" style="color: var(--bs-body-bg);">TClone</a></div>
+                </nav>
+            </div>
+            <div class="col-5">
+                <nav class="navbar navbar-light navbar-expand-lg navigation-clean-search" style="background: var(--bs-info);">
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+                            <form class="me-auto search-form" target="_self">
+                                <div class="d-flex align-items-center">
+                                    <label class="form-label d-flex mb-0" for="search-field">
+                                        <i class="fa fa-search fs-4 text-light" style="color: var(--bs-body-bg);padding: 5px;"></i>
+                                    </label>
+                                    <input class="form-control search-field text-light" type="search" id="search-field" name="search" style="padding: 5px 10px;min-width: 100px;"></div>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-3 "><i id="user-icon" class="far fa-user fs-1 text-end text-light" style="padding: 20px;" data-toggle="modal" data-target="#login-modal"></i></div>
+        </div>
+        
+        <!-- Inhalt -->
+        <div class="row">
+            <div class="col-3" style="border-style: none;border-right: 2px solid var(--bs-light); min-height: 400px;">
+                <div class="row">
+                    <div class="col-2"><i id="post-icon" class="fa fa-pencil-square-o fs-4 text-light" style="padding: 5px;"></i></div>
+                    <div class="col-10">
+                        <p style="color: var(--bs-body-bg);padding: 5px;">Neuer Post</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p style="color: var(--bs-body-bg);"># Entdecken</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6" id="posts">
+                <!--Posts will be added here-->
+            </div>
+            <div class="col-3" style="border-color: var(--bs-gray-800);border-left-style: solid;border-left-color: var(--bs-light);">
+                <div class="row">
+                    <div class="col-2"><i class="fa fa-gears fs-4 text-light" style="padding: 5px;"></i></div>
+                    <div class="col-10">
+                        <p style="color: var(--bs-body-bg);padding: 5px;">Einstellungen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ende -->
+        <div class="row">
+            <div class="col-3">
+                <p></p>
+            </div>
+            <div class="col-6">
+                <p class="text-center" style="color: var(--bs-body-bg);text-align: center;margin: 10px;">Beispiel-GUI mit Bootstrap</p>
+            </div>
+            <div class="col-3">
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Scripts -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            
+            
+            //Die HTML-Vorlage für einen Post
+            post_template = '<div class="row">\
+                        <div class="col-12">\
+                         <h4 style="color: var(--bs-body-bg);margin: 20px 0px 20px 0px;">${user}</h4>\
+                        </div>\
+                    </div>\
+                    <div class="row">\
+                        <div class="col-12">\
+                            <p style="color: var(--bs-body-bg);">${text}</p>\
+                        </div>\
+                    </div>'
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const search = urlParams.get('search');
+            var path = "/api/posts";
+            if (search) {
+                path = path + "?search=" + search
+            };
+
+            //Inhalt aktualisieren
+            $.get(path, function(daten) {
+                daten.forEach(p => {
+                    var zeit = new Date(p.zeit * 1000).toLocaleString();
+                    var text = p.text;
+                    var benutzer = p.benutzer;
+                    console.log(p.text);
+                    
+                    //Der bessere Weg wäre hier eine Template-Bibliothek statt `replace` zu verwenden
+                    var post_html = post_template.replace("${user}", "@" + benutzer + " " + zeit);
+                    var post_html = post_html.replace("${text}", text);
+                    
+                    $("#posts").append(post_html);
+                });
+            })          
+            
+            //Nutzer Login
+            $('#login-modal').on('shown.bs.modal', function () {
+                $('#login-input').trigger('focus');
+            })
+
+            $('#user-icon').click(function(event){
+                $('#login-modal').show();
+            })
+
+            $('#login-button').click(function(event){
+                var benutzer = $('#login-input').val();
+                localStorage.setItem('benutzer', benutzer);
+                console.log(localStorage.getItem('benutzer'));
+                $('#login-modal').hide();
+            })
+
+            $('#login-close-button').click(function(event){
+                $('#login-modal').hide();
+            })
+
+            //Neuer Post
+            $('#post-modal').on('shown.bs.modal', function () {
+                $('#post-text').trigger('focus');
+            })
+
+            $('#post-icon').click(function(event){
+                $('#post-modal').show();
+            })
+            
+            $('#post-button').click(function(event){
+                var text = $('#post-text').val();
+                //TODO: Post
+                $('#post-modal').hide();
+            })
+
+            $('#post-close-button').click(function(event){
+                $('#post-modal').hide();
+            })
+            
+        })
+    </script>
+</body>
+
+</html>
