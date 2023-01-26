@@ -194,8 +194,15 @@
             })
             
             $('#post-button').click(function(event){
+                
+                var benutzer = localStorage.getItem('benutzer')
+                var zeit = Math.round(Date.now() / 1000)
                 var text = $('#post-text').val();
-                //TODO: Post
+                $.ajax('/api/post', {
+                    data : JSON.stringify({"benutzer": benutzer, "zeit": zeit, "text": text}),
+                    contentType : 'application/json',
+                    type : 'POST'
+                });
                 $('#post-modal').hide();
             })
 

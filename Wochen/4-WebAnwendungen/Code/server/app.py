@@ -80,6 +80,7 @@ Post erstellen
 @app.route('/api/post', methods=['POST'])
 def post_post():
     d = request.json
+    print('daten = {}'.format(d))
     text = d['text']
     benutzer = Benutzer(d['benutzer'])
     post = Post(benutzer, d['zeit'], text)
