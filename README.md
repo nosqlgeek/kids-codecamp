@@ -79,4 +79,15 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 1. [Übung 6: Das TClone Datenmodell](./Wochen/3-ObjektOrientierung/Aufgaben/6-TCloneAlsModell.md)
 
 
-> Bis nächste Woche! Hier geht es bald weiter.
+### Woche 3 - Funktionen und Objekte
+#### Theorie und Demonstration
+
+* [Testen und Debuggen](./Wochen/4-WebAnwendungen/Artikel/TestUndDebug.md)
+* [Client und Server](./Wochen/4-WebAnwendungen/Artikel/ClientServer.md)
+* [Datenbanken mit Redis Stack](./Wochen/4-WebAnwendungen/Artikel/RedisStack.md)
+   * [Code](./Wochen/4-WebAnwendungen/Code/server/dao.py)
+   * [Tests](./Wochen/4-WebAnwendungen/Code/test/dao_test.py)
+* [Web-Server mit Flask](./Wochen/4-WebAnwendungen/Artikel/Flask.md)
+   * [Code](./Wochen/4-WebAnwendungen/Code/server/app.py)
+   * [Tests](./Wochen/4-WebAnwendungen/Code/test/http_test.py)
+* [Einführung in JavaScript](./Wochen/4-WebAnwendungen/Artikel/JavaScript.md)
