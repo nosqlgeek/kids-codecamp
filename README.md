@@ -79,7 +79,7 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 1. [Übung 6: Das TClone Datenmodell](./Wochen/3-ObjektOrientierung/Aufgaben/6-TCloneAlsModell.md)
 
 
-### Woche 3 - Funktionen und Objekte
+### Woche 4 - Funktionen und Objekte
 #### Theorie und Demonstration
 
 * [Testen und Debuggen](./Wochen/4-WebAnwendungen/Artikel/TestUndDebug.md)
