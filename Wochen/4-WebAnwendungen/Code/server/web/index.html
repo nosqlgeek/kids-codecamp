@@ -12,43 +12,8 @@
     <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
 </head>
 
-<!-- Dialoge -->
-<div id="login-modal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Einloggen</h5>
-              <button id="login-close-button" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <input id="login-input" placeholder="Kurzname?" style="width: 100%;"></input>
-            </div>
-            <div class="modal-footer">
-              <button id="login-button" type="button" class="btn btn-primary">Einloggen</button>
-            </div>
-          </div>
-        </div>
-</div>
-
-<div id="post-modal" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Neuer Post</h5>
-          <button id="post-close-button" type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <textarea id="post-text" placeholder="Text?" style="width: 100%;"></textarea>
-        </div>
-        <div class="modal-footer">
-          <button id="post-button" type="button" class="btn btn-primary">Posten</button>
-        </div>
-      </div>
-    </div>
+<div id="dialoge">
+    <!-- Dialoge hier-->
 </div>
 
 <body>
@@ -126,20 +91,33 @@
     <script src="assets/js/jquery-3.6.3.min.js"></script>
 
     <script>
+
+        //Importiert das HTML der Dialoge und lädt die Logik von der JS-Datei 
+        function import_dialog(name) {
+            $.get(name + ".html", function (result) {
+                var html = result;
+                $("#dialoge").append(html);
+                $.getScript("js/" + name + ".js");
+            }); 
+        }
+
         $(document).ready(function(){
             
-            
+            //Importiere die Dialoge 
+            import_dialog("login");
+            import_dialog("post")
+
             //Die HTML-Vorlage für einen Post
             post_template = '<div class="row">\
-                        <div class="col-12">\
-                         <h4 style="color: var(--bs-body-bg);margin: 20px 0px 20px 0px;">${user}</h4>\
-                        </div>\
-                    </div>\
-                    <div class="row">\
-                        <div class="col-12">\
-                            <p style="color: var(--bs-body-bg);">${text}</p>\
-                        </div>\
-                    </div>'
+                                <div class="col-12">\
+                                    <h4 style="color: var(--bs-body-bg);margin: 20px 0px 20px 0px;">${user}</h4>\
+                                </div>\
+                            </div>\
+                            <div class="row">\
+                                <div class="col-12">\
+                                    <p style="color: var(--bs-body-bg);">${text}</p>\
+                                </div>\
+                            </div>'
 
             const urlParams = new URLSearchParams(window.location.search);
             const search = urlParams.get('search');
@@ -163,53 +141,6 @@
                     $("#posts").append(post_html);
                 });
             })          
-            
-            //Nutzer Login
-            $('#login-modal').on('shown.bs.modal', function () {
-                $('#login-input').trigger('focus');
-            })
-
-            $('#user-icon').click(function(event){
-                $('#login-modal').show();
-            })
-
-            $('#login-button').click(function(event){
-                var benutzer = $('#login-input').val();
-                localStorage.setItem('benutzer', benutzer);
-                console.log(localStorage.getItem('benutzer'));
-                $('#login-modal').hide();
-            })
-
-            $('#login-close-button').click(function(event){
-                $('#login-modal').hide();
-            })
-
-            //Neuer Post
-            $('#post-modal').on('shown.bs.modal', function () {
-                $('#post-text').trigger('focus');
-            })
-
-            $('#post-icon').click(function(event){
-                $('#post-modal').show();
-            })
-            
-            $('#post-button').click(function(event){
-                
-                var benutzer = localStorage.getItem('benutzer')
-                var zeit = Math.round(Date.now() / 1000)
-                var text = $('#post-text').val();
-                $.ajax('/api/post', {
-                    data : JSON.stringify({"benutzer": benutzer, "zeit": zeit, "text": text}),
-                    contentType : 'application/json',
-                    type : 'POST'
-                });
-                $('#post-modal').hide();
-            })
-
-            $('#post-close-button').click(function(event){
-                $('#post-modal').hide();
-            })
-            
         })
     </script>
 </body>
