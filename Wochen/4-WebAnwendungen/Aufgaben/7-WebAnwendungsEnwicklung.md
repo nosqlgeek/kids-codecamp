@@ -1,4 +1,4 @@
-# 7.) Fertigstellen der WebAnwendunge
+# 7.) Fertigstellen der Web-Anwendung
 
 Da die Themen
 

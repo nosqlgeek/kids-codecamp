@@ -101,7 +101,7 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 
 #### Übungsaufgaben
 
-1. [Übung 7: Fertigstellen der WebAnwendunge](./Wochen/4-WebAnwendungen/Aufgaben/7-WebAnwendungsEnwicklung.md)
+1. [Übung 7: Fertigstellen der Web-Anwendung](./Wochen/4-WebAnwendungen/Aufgaben/7-WebAnwendungsEnwicklung.md)
 
 ## Tschüs!
 
