@@ -16,4 +16,4 @@ if __name__ == '__main__':
     print("START: Debug-Sitzung")
     
     # Testfall
-    #dao_test.test_post_abfrage()
+    dao_test.test_post_abfrage()

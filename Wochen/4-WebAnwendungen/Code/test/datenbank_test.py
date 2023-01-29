@@ -18,4 +18,3 @@ def test_abfragen():
     datenbank.verbinden()
     datenbank.indizes_erstellen()
     assert datenbank.abfragen('post','*') == []
-    
