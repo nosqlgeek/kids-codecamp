@@ -21,10 +21,18 @@ Stell Dir vor, Du gehst in ein Restaurant, um etwas zu essen. In diesem Beispiel
 7. Das Essen wird zubereitet und anschließend an Deinen Tisch gebracht.
 8. Du zahlst, bevor Du gehst.
 
-Genauso ist das auch bei Computern. Dabei gibt es verschiedene Ebenen der Kommunikation, aber wir wollen das hier nicht allzu kompliziert darstellen:
+Wie kann man das auf obiges Diagram abbilden?
+
+| Echte Welt | Software |
+| --- | --- |
+| Restaurant | Server |
+| Kellner | Dienst |
+| Du | Client |
+
+Genau wie im Beispiel ist das auch bei Computern. Dabei gibt es verschiedene Ebenen der Kommunikation, aber wir wollen das hier nicht allzu kompliziert darstellen:
 
 1. Der Server hat eine Adresse (z.B. 192.168.0.3).
-2. Der Server lauscht auf einem Port (z.B. 80). Einen Port kannst Du Dir wie eine Tür vorstellen. Ist die Tür geöffnet, können Daten übertragen werden.
+2. Der Dienst lauscht auf einem Port (z.B. 80). Einen Port kannst Du Dir wie eine Tür vorstellen. Ist die Tür geöffnet, können Daten übertragen werden.
 3. Der Client kann eine Verbindung zum Server unter der Adresse und dem Port aufbauen
 4. Der Client kann Daten über diese Verbindung zum Server senden.
 5. Der Server verarbeitet die Daten und antwortet dem Client.
