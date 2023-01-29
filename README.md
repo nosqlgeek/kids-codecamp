@@ -80,14 +80,30 @@ Die folgenden Lernziele sollten am Ende des Code Camps erreicht sein:
 
 
 ### Woche 4 - Web-Anwendungen
-#### Theorie und Demonstration
+#### Theorie
 
 * [Testen und Debuggen](./Wochen/4-WebAnwendungen/Artikel/TestUndDebug.md)
 * [Client und Server](./Wochen/4-WebAnwendungen/Artikel/ClientServer.md)
 * [Datenbanken mit Redis Stack](./Wochen/4-WebAnwendungen/Artikel/RedisStack.md)
+* [Web-Server mit Flask](./Wochen/4-WebAnwendungen/Artikel/Flask.md)
+* [Einführung in JavaScript](./Wochen/4-WebAnwendungen/Artikel/JavaScript.md)
+
+#### Demonstrationen
+
+* Datenbank
    * [Code](./Wochen/4-WebAnwendungen/Code/server/dao.py)
    * [Tests](./Wochen/4-WebAnwendungen/Code/test/dao_test.py)
-* [Web-Server mit Flask](./Wochen/4-WebAnwendungen/Artikel/Flask.md)
+* HTTP Dienst
    * [Code](./Wochen/4-WebAnwendungen/Code/server/app.py)
    * [Tests](./Wochen/4-WebAnwendungen/Code/test/http_test.py)
-* [Einführung in JavaScript](./Wochen/4-WebAnwendungen/Artikel/JavaScript.md)
+* Web-Oberfläche
+   * [Code](./Wochen/4-WebAnwendungen/Code/server/web/index.html)
+
+#### Übungsaufgaben
+
+1. [Übung 7: Fertigstellen der WebAnwendunge](./Wochen/4-WebAnwendungen/Aufgaben/7-WebAnwendungsEnwicklung.md)
+
+## Tschüs!
+
+Ich hoffe, dass ihr Spass am Codecamp hattet :-). Feedback könnt ihr gern auch später noch an codecamp@nosqlgeek.de senden.
+
